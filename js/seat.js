@@ -52,7 +52,7 @@ for (let index = 0; index < seats.length; index++) {
 
         const totalPrice = document.getElementById('total-price')
         const price =  parseInt(totalPrice.innerText)
-        const priceSum =  price + 550 ;
+        const priceSum = price + 550 ;
         totalPrice.innerText =  priceSum;
 
 
@@ -63,3 +63,30 @@ for (let index = 0; index < seats.length; index++) {
 
 
 }
+
+const applyCouponBtn = document.getElementById('apply-coupon')
+applyCouponBtn.addEventListener('click', function () {
+
+   const inputCoupon = document.getElementById('input-value').value
+   const couponCode = inputCoupon.split(" ").join("").toUpperCase();
+   const totalPrice = document.getElementById('total-price').innerText
+   if(couponCode==='NEW15') {
+    
+
+
+    const discount= totalPrice * 15 / 100 ;
+    const discountAmount = parseFloat(discount).toFixed(3);
+    
+    const lastPrice = document.getElementById('final-price')
+    const lastTotalPrice = totalPrice - discountAmount;
+    lastPrice.innerText = lastTotalPrice ;
+    console.log(lastTotalPrice)
+
+   }
+   else if (couponCode==='Coupon20') {
+
+   }
+   else{
+    alert('Wrong Coupon')
+   }
+})
