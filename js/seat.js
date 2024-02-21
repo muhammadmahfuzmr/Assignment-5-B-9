@@ -1,3 +1,4 @@
+
 const seats = document.querySelectorAll('.seat')
 
 
@@ -7,17 +8,15 @@ for (let index = 0; index < seats.length; index++) {
 
     seat.addEventListener('click', function (event) {
 
+        // setTimeout(function () {
 
+        //     event.target.disabled = true;
+            
+            
 
+        // }, 0)
 
-        setTimeout(function () {
-
-            event.target.disabled = true;
-
-
-        }, 0)
-
-
+        seat.classList.add('bg-lime-500')
 
 
         const seatNo = seat.innerText
@@ -47,6 +46,8 @@ for (let index = 0; index < seats.length; index++) {
         currentAvailableSeat.innerText = seatAvailableNow + ' '
 
 
+
+
         //bg color change-------------------------------------------------
 
 
@@ -58,6 +59,7 @@ for (let index = 0; index < seats.length; index++) {
         const currentBookingTicket = parseInt(buyTicket.innerText)
         const bookedTicket = currentBookingTicket + 1;
         buyTicket.innerText = bookedTicket
+
 
 
         //  total price----------------------------------------------------------
@@ -73,7 +75,11 @@ for (let index = 0; index < seats.length; index++) {
 
     })
 
+   
+
 }
+
+
 
 const applyCouponBtn = document.getElementById('apply-coupon')
 const couponApply = document.getElementById('coupon')
@@ -118,7 +124,7 @@ applyCouponBtn.addEventListener('click', function () {
 
 
 
-    
+
 
 })
 
