@@ -5,18 +5,19 @@ const seats = document.querySelectorAll('.seat')
 for (let index = 0; index < seats.length; index++) {
     const seat = seats[index]
 
+   
 
     seat.addEventListener('click', function (event) {
 
         setTimeout(function () {
 
             event.target.disabled = true;
-            
-            
+
+
 
         }, 0)
 
-        
+
 
         seat.classList.add('bg-lime-500')
 
@@ -77,7 +78,7 @@ for (let index = 0; index < seats.length; index++) {
 
     })
 
-   
+
 
 }
 
@@ -158,3 +159,5 @@ nextBtn.addEventListener('click', function () {
     footerSection.classList.add('hidden')
 
 })
+
+
