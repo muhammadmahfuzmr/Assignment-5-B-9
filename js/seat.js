@@ -8,13 +8,15 @@ for (let index = 0; index < seats.length; index++) {
 
     seat.addEventListener('click', function (event) {
 
-        // setTimeout(function () {
+        setTimeout(function () {
 
-        //     event.target.disabled = true;
+            event.target.disabled = true;
             
             
 
-        // }, 0)
+        }, 0)
+
+        
 
         seat.classList.add('bg-lime-500')
 
